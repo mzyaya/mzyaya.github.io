@@ -1,0 +1,82 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-12-30 10:24:14
+ * @LastEditTime: 2020-12-30 10:28:22
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \正方体旋转动画\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+
+    <!--下雪动画-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/snow.js"></script>
+
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+<div id="maic">
+	  <img id="imgdh" src="image/music.gif">
+	  <img id="img" src="image/music_off.png">
+	  <audio src="1.mp3" autoplay loop></audio>
+	</div>
+    <div class="snow-container">
+      <div class="ziti">
+        <span> ❤愿小胡姐姐永远开心❤ </span>
+      </div>
+
+      <div class="dongtai">
+        <ul>
+          <li>
+            <img src="image/1.png" alt="" />
+          </li>
+          <li>
+            <img src="image/2.png" alt="" />
+          </li>
+          <li>
+            <img src="image/3.png" alt="" />
+          </li>
+          <li>
+            <img src="image/4.png" alt="" />
+          </li>
+          <li>
+            <img src="image/5.png" alt="" />
+          </li>
+          <li>
+            <img src="image/6.png" alt="" />
+          </li>
+        </ul>
+      </div>
+    </div>
+<script type="text/javascript" type="text/javascript">
+	try {
+		var maic = document.getElementById("maic");
+		var imgdh = document.querySelectorAll("#imgdh")[0];
+		var img = document.querySelectorAll("#img")[0];
+		var audio = document.querySelector("audio");
+		var flag=0;
+		maic.onclick = function(){
+			if(flag == 1){
+				imgdh.style.display="none";
+				img.style.animation="none";
+				audio.pause();
+				flag = 0;
+			}else{
+				imgdh.style.display="block";
+				img.style.animation=" zhuan 1s linear infinite";
+				audio.play();
+				flag=1;
+			}
+		}
+	} catch (error) {
+		console.log(error);
+	}
+	
+  </script>
+  </body>
+</html>
